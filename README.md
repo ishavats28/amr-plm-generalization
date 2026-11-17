@@ -1,5 +1,9 @@
 # Biological Generalization of Protein Language Models for Antimicrobial Resistance with ESKAPE Proteome Applications
 
+[![GitHub Release](https://img.shields.io/github/v/release/ishavats28/amr-plm-generalization)](https://github.com/ishavats28/amr-plm-generalization/releases/latest)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24325723.svg)](https://doi.org/10.5281/zenodo.24325723)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 This repository accompanies a study of how protein language model classifiers behave on proteins separated by homology and on biologically withheld resistance groups. It releases verified supplementary results, three final publication figures, and selected scientific implementations. Raw training sequences, trained checkpoints, and database installations are not included.
 
 ## Scientific question and design
@@ -53,7 +57,12 @@ These self-tests exercise inference-policy logic without downloading weights or 
 
 ## Data, citation, and license
 
-Use [CITATION.cff](CITATION.cff) to cite the repository software. No journal citation or DOI is assigned here. The [MIT license](LICENSE) covers original software for which the repository owner holds licensing rights; it does not relicense external datasets, model weights, or database software.
+The validated supplementary datasets, publication figures, and selected scientific implementations are available in this repository. The initial publication release (v1.0.0) is permanently archived on Zenodo.
 
-The study uses [NCBI RefSeq and AMRFinderPlus](https://www.ncbi.nlm.nih.gov/pathogens/antimicrobial-resistance/AMRFinder/), [CARD](https://card.mcmaster.ca/about), [UniProtKB/Swiss-Prot](https://www.expasy.org/resources/uniprotkb-swiss-prot), and [InterPro/InterProScan](https://interpro-documentation.readthedocs.io/en/latest/license.html). Source-specific attribution and reuse notes are in the [supplementary data README](data/supplementary/README.md).
+**Software citation**
 
+Vats, I. (2026). *AMR Protein Language Model Generalization* (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.24325723
+
+The version-specific DOI identifies the archived v1.0.0 release. Software citation metadata are also provided in [CITATION.cff](CITATION.cff).
+
+Original repository software is distributed under the [MIT License](LICENSE). Third-party data, pretrained models, and database resources remain subject to their respective licenses and attribution requirements. See the [supplementary data documentation](data/supplementary/README.md) and [reproducibility guide](REPRODUCIBILITY.md) for further details.

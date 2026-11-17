@@ -1,9 +1,17 @@
 cff-version: 1.2.0
-message: If you use this repository's software, cite the software using this metadata and cite the associated study when available.
+message: "If you use this repository, please cite the archived software release."
 type: software
-title: AMR Protein Language Model Generalization
+
+title: "AMR Protein Language Model Generalization"
+
 authors:
   - family-names: Vats
     given-names: Isha
+
+version: 1.0.0
+doi: 10.5281/zenodo.24325723
+
 repository-code: https://github.com/ishavats28/amr-plm-generalization
+url: https://doi.org/10.5281/zenodo.24325723
+
 license: MIT
