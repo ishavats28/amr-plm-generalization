@@ -1,0 +1,82 @@
+{
+  "dataset_version": "V2",
+  "execution_order": [
+    "M1",
+    "M3",
+    "M0"
+  ],
+  "backbone": {
+    "base_weights_frozen": true,
+    "commit": "08e4846e537177426273712802403f7ba8261b6c",
+    "gradient_checkpointing": true,
+    "precision": "bfloat16",
+    "repository": "facebook/esm2_t33_650M_UR50D"
+  },
+  "lora": {
+    "alpha": 16,
+    "bias": "none",
+    "dropout": 0.05,
+    "expected_target_count": 66,
+    "rank": 8,
+    "target_modules": [
+      "query",
+      "value"
+    ],
+    "trainable_adapter_parameters": 1351680
+  },
+  "training": {
+    "adapter_lr": 0.0001,
+    "checkpoint_selection": "validation_loss",
+    "classification_threshold": 0.5,
+    "early_stopping_min_delta": 0.0001,
+    "early_stopping_patience": 3,
+    "effective_batch_size": 16,
+    "gradient_accumulation_steps": 8,
+    "gradient_clip_norm": 1.0,
+    "head_lr": 1e-05,
+    "initialization": "selected_frozen_baseline_head_plus_zero_initialized_lora",
+    "loss": "binary_cross_entropy_with_logits",
+    "max_epochs": 8,
+    "microbatch_size": 2,
+    "no_sequence_truncation": true,
+    "optimizer": "AdamW",
+    "scheduler": "cosine_decay",
+    "seeds": [
+      42,
+      52,
+      62
+    ],
+    "warmup_fraction": 0.05,
+    "weight_decay": 0.01
+  },
+  "selection": {
+    "architecture_metric": "mean_validation_MCC_across_seeds",
+    "checkpoint_rule": "minimum_validation_loss_per_run",
+    "heldout_test_used_for_selection": false,
+    "ood_used_for_selection": false,
+    "tie_breaker": "lower_mean_validation_loss",
+    "winning_architecture_checkpoint": "lowest_validation_loss_seed"
+  },
+  "software": {
+    "accelerate": "1.15.0",
+    "peft": "0.21.2",
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2"
+  },
+  "train_rows": 12152,
+  "validation_rows": 1500,
+  "model_baselines": {
+    "M0": {
+      "baseline_best_epoch": 6,
+      "head_trainable_parameters": 344449
+    },
+    "M1": {
+      "baseline_best_epoch": 1,
+      "head_trainable_parameters": 2671361
+    },
+    "M3": {
+      "baseline_best_epoch": 4,
+      "head_trainable_parameters": 1927042
+    }
+  }
+}

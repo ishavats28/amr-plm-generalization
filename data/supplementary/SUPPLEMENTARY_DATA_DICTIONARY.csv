@@ -1,0 +1,240 @@
+file,column,data_type,missing_allowed,definition
+Table_S1_LoRA_runs.tsv,model,string,no,Model architecture identifier.
+Table_S1_LoRA_runs.tsv,architecture,string,no,Architecture.
+Table_S1_LoRA_runs.tsv,seed,integer,no,Random seed recorded for the selected run.
+Table_S1_LoRA_runs.tsv,selected_epoch,integer,no,Validation-loss-selected epoch.
+Table_S1_LoRA_runs.tsv,selected_for_heldout,boolean/binary,no,Whether this LoRA run supplied the locked held-out checkpoint.
+Table_S1_LoRA_runs.tsv,validation_loss,number,no,Development-validation loss at the run-selected epoch.
+Table_S1_LoRA_runs.tsv,validation_accuracy_0_5,number,no,Development-validation accuracy at threshold 0.5.
+Table_S1_LoRA_runs.tsv,validation_average_precision,number,no,Development-validation average precision.
+Table_S1_LoRA_runs.tsv,validation_balanced_accuracy_0_5,number,no,Development-validation balanced accuracy at threshold 0.5.
+Table_S1_LoRA_runs.tsv,validation_brier,number,no,Development-validation brier.
+Table_S1_LoRA_runs.tsv,validation_f1_0_5,number,no,Development-validation f1 at threshold 0.5.
+Table_S1_LoRA_runs.tsv,validation_mcc_0_5,number,no,Development-validation mcc at threshold 0.5.
+Table_S1_LoRA_runs.tsv,validation_precision_0_5,number,no,Development-validation precision at threshold 0.5.
+Table_S1_LoRA_runs.tsv,validation_recall_0_5,number,no,Development-validation recall at threshold 0.5.
+Table_S1_LoRA_runs.tsv,validation_roc_auc,number,no,Development-validation roc auc.
+Table_S1_LoRA_runs.tsv,checkpoint_sha256,string,no,SHA-256 fingerprint of the exact model checkpoint.
+Table_S1_LoRA_runs.tsv,source_path,string,no,Path relative to the research root for the principal source record.
+Table_S2_Heldout_metrics.tsv,partition,string,no,Held-out partition: test or Group-OOD.
+Table_S2_Heldout_metrics.tsv,model,string,no,Model architecture identifier.
+Table_S2_Heldout_metrics.tsv,regime,string,no,Frozen or LoRA adaptation regime.
+Table_S2_Heldout_metrics.tsv,seed,integer,no,Random seed recorded for the selected run.
+Table_S2_Heldout_metrics.tsv,selected_epoch,integer,no,Validation-loss-selected epoch.
+Table_S2_Heldout_metrics.tsv,n,integer,no,Number of evaluated proteins.
+Table_S2_Heldout_metrics.tsv,threshold,number,no,Fixed probability decision threshold.
+Table_S2_Heldout_metrics.tsv,accuracy,number,no,Classification accuracy.
+Table_S2_Heldout_metrics.tsv,average_precision,number,no,Average precision from saved probabilities.
+Table_S2_Heldout_metrics.tsv,balanced_accuracy,number,no,Mean class recall.
+Table_S2_Heldout_metrics.tsv,brier,number,no,Brier score from saved probabilities.
+Table_S2_Heldout_metrics.tsv,f1,number,no,F1 score.
+Table_S2_Heldout_metrics.tsv,fn,integer,no,False negatives.
+Table_S2_Heldout_metrics.tsv,fp,integer,no,False positives.
+Table_S2_Heldout_metrics.tsv,mcc,number,no,Matthews correlation coefficient.
+Table_S2_Heldout_metrics.tsv,precision,number,no,Positive predictive value.
+Table_S2_Heldout_metrics.tsv,prevalence_positive,number,no,Positive-label fraction.
+Table_S2_Heldout_metrics.tsv,roc_auc,number,no,Area under the receiver-operating-characteristic curve.
+Table_S2_Heldout_metrics.tsv,sensitivity_recall,number,no,Positive-class recall.
+Table_S2_Heldout_metrics.tsv,specificity,number,no,Negative-class recall.
+Table_S2_Heldout_metrics.tsv,tn,integer,no,True negatives.
+Table_S2_Heldout_metrics.tsv,tp,integer,no,True positives.
+Table_S2_Heldout_metrics.tsv,checkpoint_sha256,string,no,SHA-256 fingerprint of the exact model checkpoint.
+Table_S2_Heldout_metrics.tsv,source_path,string,no,Path relative to the research root for the principal source record.
+Table_S2_Component_bootstrap.tsv,partition,string,no,Held-out partition: test or Group-OOD.
+Table_S2_Component_bootstrap.tsv,analysis_role,string,no,Prespecified inferential role of the comparison.
+Table_S2_Component_bootstrap.tsv,model,string,no,Model architecture identifier.
+Table_S2_Component_bootstrap.tsv,comparison,string,no,"Frozen, LoRA, or paired LoRA-minus-frozen contrast."
+Table_S2_Component_bootstrap.tsv,point_estimate,number,no,Archived MCC or paired MCC difference.
+Table_S2_Component_bootstrap.tsv,ci95_lower,number,no,Lower archived percentile 95% confidence bound.
+Table_S2_Component_bootstrap.tsv,ci95_upper,number,no,Upper archived percentile 95% confidence bound.
+Table_S2_Component_bootstrap.tsv,bootstrap_mean,number,no,Mean across archived bootstrap replicates.
+Table_S2_Component_bootstrap.tsv,n_replicates,integer,no,Number of archived bootstrap replicates.
+Table_S2_Component_bootstrap.tsv,seed,integer,no,Random seed recorded for the selected run.
+Table_S2_Component_bootstrap.tsv,confidence_interval_method,string,no,Archived confidence-interval method.
+Table_S2_Component_bootstrap.tsv,n_positive_components,integer,no,Number of positive-class homology components sampled.
+Table_S2_Component_bootstrap.tsv,n_negative_components,integer,no,Number of negative-class homology components sampled.
+Table_S2_Component_bootstrap.tsv,degenerate_true_class_replicates,boolean/binary,no,Replicates lacking a true class.
+Table_S2_Component_bootstrap.tsv,single_predicted_class_replicates,integer,yes,Replicates with one predicted class.
+Table_S3_Block_definitions.tsv,block_id,string,no,Stable verified Group-OOD positive biological-block identifier.
+Table_S3_Block_definitions.tsv,positive_proteins,integer,no,Positive proteins in the block.
+Table_S3_Block_definitions.tsv,strict_components,integer,no,Strict homology components in the block.
+Table_S3_Block_definitions.tsv,component_ids,string,no,Semicolon-delimited strict component identifiers.
+Table_S3_Block_definitions.tsv,share_of_all_ood_positives,number,no,Block share of all Group-OOD positives.
+Table_S3_Block_recovery.tsv,model,string,no,Model architecture identifier.
+Table_S3_Block_recovery.tsv,regime,string,no,Frozen or LoRA adaptation regime.
+Table_S3_Block_recovery.tsv,block_id,string,no,Stable verified Group-OOD positive biological-block identifier.
+Table_S3_Block_recovery.tsv,positive_proteins,integer,no,Positive proteins in the block.
+Table_S3_Block_recovery.tsv,strict_components,integer,no,Strict homology components in the block.
+Table_S3_Block_recovery.tsv,tp,integer,no,True positives.
+Table_S3_Block_recovery.tsv,fn,integer,no,False negatives.
+Table_S3_Block_recovery.tsv,positive_recall,number,no,Positive-class recovery within the block.
+Table_S3_Block_recovery.tsv,share_of_all_false_negatives,number,no,Block share of the model's Group-OOD false negatives.
+Table_S3_Block_recovery.tsv,component_ids,string,no,Semicolon-delimited strict component identifiers.
+Table_S3_Block_summaries.tsv,model,string,no,Model architecture identifier.
+Table_S3_Block_summaries.tsv,regime,string,no,Frozen or LoRA adaptation regime.
+Table_S3_Block_summaries.tsv,overall_positive_recall,number,no,Overall positive recall.
+Table_S3_Block_summaries.tsv,macro_block_recall,number,no,Unweighted mean recall across 24 positive blocks.
+Table_S3_Block_summaries.tsv,median_block_recall,boolean/binary,no,Median recall across 24 positive blocks.
+Table_S3_Block_summaries.tsv,blocks_with_zero_recall,integer,no,Count of blocks with no recovered positive.
+Table_S3_Block_summaries.tsv,blocks_with_full_recall,integer,no,Count of blocks with recall 1.
+Table_S3_Block_summaries.tsv,tp,integer,no,True positives.
+Table_S3_Block_summaries.tsv,fn,integer,no,False negatives.
+Table_S3_Block_summaries.tsv,largest_block_fn,integer,no,False negatives in the 170-protein largest block.
+Table_S3_Block_summaries.tsv,largest_block_share_of_fn,number,no,Largest-block share of all false negatives.
+Table_S4_Proteome_summary.tsv,panel_id,string,no,Stable ESKAPE reference-panel identifier.
+Table_S4_Proteome_summary.tsv,species,string,no,Reference species; scientific names are descriptive panel metadata.
+Table_S4_Proteome_summary.tsv,assembly,string,no,NCBI RefSeq assembly accession.
+Table_S4_Proteome_summary.tsv,n_original,integer,no,Protein records before eligibility filtering.
+Table_S4_Proteome_summary.tsv,n_eligible,integer,no,Protein records eligible for inference.
+Table_S4_Proteome_summary.tsv,n_amrf_any_hit_full,integer,no,Original proteins with any AMRFinderPlus hit flag.
+Table_S4_Proteome_summary.tsv,n_amrf_any_hit_eligible,integer,no,Eligible proteins with any AMRFinderPlus hit flag.
+Table_S4_Proteome_summary.tsv,n_core_amr_full,integer,no,Original proteins with a core AMR annotation.
+Table_S4_Proteome_summary.tsv,n_core_amr_eligible,integer,no,Eligible proteins with a core AMR annotation.
+Table_S4_Proteome_summary.tsv,n_core_amr_excluded,boolean/binary,no,Core AMR-annotated proteins excluded by inference eligibility.
+Table_S4_Proteome_summary.tsv,n_plus_full,integer,no,Original proteins with a plus-category annotation.
+Table_S4_Proteome_summary.tsv,n_plus_eligible,integer,no,Eligible proteins with a plus-category annotation.
+Table_S4_Proteome_summary.tsv,n_other_noncore_full,boolean/binary,no,Original proteins with another noncore AMRFinderPlus hit.
+Table_S4_Proteome_summary.tsv,n_other_noncore_eligible,boolean/binary,no,Eligible proteins with another noncore AMRFinderPlus hit.
+Table_S4_Proteome_summary.tsv,n_exact_overlap_eligible,integer,no,Eligible proteins exactly overlapping the original classification dataset.
+Table_S4_Proteome_summary.tsv,M1_frozen_total_model_positive,integer,no,"Total eligible proteins predicted positive by M1_frozen, read directly from final E2 results."
+Table_S4_Proteome_summary.tsv,M1_frozen_core_amr_positive,integer,no,"Eligible core AMR annotations predicted positive by M1_frozen, from E3 concordance."
+Table_S4_Proteome_summary.tsv,M1_LoRA_total_model_positive,integer,no,"Total eligible proteins predicted positive by M1_LoRA, read directly from final E2 results."
+Table_S4_Proteome_summary.tsv,M1_LoRA_core_amr_positive,integer,no,"Eligible core AMR annotations predicted positive by M1_LoRA, from E3 concordance."
+Table_S4_Proteome_summary.tsv,M3_frozen_total_model_positive,integer,no,"Total eligible proteins predicted positive by M3_frozen, read directly from final E2 results."
+Table_S4_Proteome_summary.tsv,M3_frozen_core_amr_positive,integer,no,"Eligible core AMR annotations predicted positive by M3_frozen, from E3 concordance."
+Table_S4_Proteome_summary.tsv,M3_LoRA_total_model_positive,integer,no,"Total eligible proteins predicted positive by M3_LoRA, read directly from final E2 results."
+Table_S4_Proteome_summary.tsv,M3_LoRA_core_amr_positive,integer,no,"Eligible core AMR annotations predicted positive by M3_LoRA, from E3 concordance."
+Table_S4_Proteome_summary.tsv,M0_frozen_total_model_positive,integer,no,"Total eligible proteins predicted positive by M0_frozen, read directly from final E2 results."
+Table_S4_Proteome_summary.tsv,M0_frozen_core_amr_positive,integer,no,"Eligible core AMR annotations predicted positive by M0_frozen, from E3 concordance."
+Table_S4_Proteome_summary.tsv,M0_LoRA_total_model_positive,integer,no,"Total eligible proteins predicted positive by M0_LoRA, read directly from final E2 results."
+Table_S4_Proteome_summary.tsv,M0_LoRA_core_amr_positive,integer,no,"Eligible core AMR annotations predicted positive by M0_LoRA, from E3 concordance."
+Table_S4_Annotation_concordance.tsv,panel_id,string,no,Stable ESKAPE reference-panel identifier.
+Table_S4_Annotation_concordance.tsv,model,string,no,Model architecture identifier.
+Table_S4_Annotation_concordance.tsv,n_model_eligible,integer,no,N model eligible.
+Table_S4_Annotation_concordance.tsv,n_model_flagged,integer,no,N model flagged.
+Table_S4_Annotation_concordance.tsv,n_amrf_core_amr_eligible,integer,no,N amrf core amr eligible.
+Table_S4_Annotation_concordance.tsv,n_core_amr_flagged_by_model,integer,no,N core amr flagged by model.
+Table_S4_Annotation_concordance.tsv,n_core_amr_not_flagged_by_model,integer,no,N core amr not flagged by model.
+Table_S4_Annotation_concordance.tsv,fraction_curated_core_amr_flagged,number,no,Fraction curated core amr flagged.
+Table_S4_Annotation_concordance.tsv,n_flagged_with_any_amrfinder_hit,integer,no,N flagged with any amrfinder hit.
+Table_S4_Annotation_concordance.tsv,n_flagged_with_plus_hit,integer,no,N flagged with plus hit.
+Table_S4_Annotation_concordance.tsv,n_flagged_without_amrfinder_hit,integer,no,N flagged without amrfinder hit.
+Table_S4_Annotation_concordance.tsv,n_flagged_nonexact,integer,no,N flagged nonexact.
+Table_S5_Candidates_552.tsv,panel_id,string,no,Stable ESKAPE reference-panel identifier.
+Table_S5_Candidates_552.tsv,assembly_accession,string,no,Assembly accession.
+Table_S5_Candidates_552.tsv,protein_key,string,no,Stable panel-scoped candidate key and parent key for linked evidence tables.
+Table_S5_Candidates_552.tsv,original_protein_id,string,no,Original protein id.
+Table_S5_Candidates_552.tsv,sequence_sha256,string,no,Sequence sha256.
+Table_S5_Candidates_552.tsv,length_aa,integer,no,Length aa.
+Table_S5_Candidates_552.tsv,exact_overlap_any,boolean/binary,no,Exact overlap any.
+Table_S5_Candidates_552.tsv,M1_frozen_score,number,no,Saved model probability score for M1_frozen.
+Table_S5_Candidates_552.tsv,M1_frozen_flag,boolean/binary,no,Binary threshold-0.5 prediction flag for M1_frozen.
+Table_S5_Candidates_552.tsv,M1_LoRA_score,number,no,Saved model probability score for M1_LoRA.
+Table_S5_Candidates_552.tsv,M1_LoRA_flag,boolean/binary,no,Binary threshold-0.5 prediction flag for M1_LoRA.
+Table_S5_Candidates_552.tsv,M3_frozen_score,number,no,Saved model probability score for M3_frozen.
+Table_S5_Candidates_552.tsv,M3_frozen_flag,boolean/binary,no,Binary threshold-0.5 prediction flag for M3_frozen.
+Table_S5_Candidates_552.tsv,M3_LoRA_score,number,no,Saved model probability score for M3_LoRA.
+Table_S5_Candidates_552.tsv,M3_LoRA_flag,boolean/binary,no,Binary threshold-0.5 prediction flag for M3_LoRA.
+Table_S5_Candidates_552.tsv,M0_frozen_score,number,no,Saved model probability score for M0_frozen.
+Table_S5_Candidates_552.tsv,M0_frozen_flag,boolean/binary,no,Binary threshold-0.5 prediction flag for M0_frozen.
+Table_S5_Candidates_552.tsv,M0_LoRA_score,number,no,Saved model probability score for M0_LoRA.
+Table_S5_Candidates_552.tsv,M0_LoRA_flag,boolean/binary,no,Binary threshold-0.5 prediction flag for M0_LoRA.
+Table_S5_Candidates_552.tsv,amrf_any_hit,boolean/binary,no,AMRFinderPlus annotation flag: any hit.
+Table_S5_Candidates_552.tsv,amrf_core_amr,boolean/binary,no,AMRFinderPlus annotation flag: core amr.
+Table_S5_Candidates_552.tsv,amrf_plus,boolean/binary,no,AMRFinderPlus annotation flag: plus.
+Table_S5_Candidates_552.tsv,amrf_other_hit,boolean/binary,no,AMRFinderPlus annotation flag: other hit.
+Table_S5_Candidates_552.tsv,number_models_flagged,integer,no,Number models flagged.
+Table_S5_Candidates_552.tsv,source_header,string,no,Source header.
+Table_S5_Candidates_552.tsv,species,string,no,Reference species; scientific names are descriptive panel metadata.
+Table_S5_Candidates_552.tsv,diamond_has_hit,boolean/binary,no,DIAMOND Swiss-Prot evidence field: has hit.
+Table_S5_Candidates_552.tsv,diamond_alignment_rows,integer,no,DIAMOND Swiss-Prot evidence field: alignment rows.
+Table_S5_Candidates_552.tsv,diamond_distinct_subjects,integer,no,DIAMOND Swiss-Prot evidence field: distinct subjects.
+Table_S5_Candidates_552.tsv,diamond_best_accession,string,yes,DIAMOND Swiss-Prot evidence field: best accession.
+Table_S5_Candidates_552.tsv,diamond_best_subject,string,yes,DIAMOND Swiss-Prot evidence field: best subject.
+Table_S5_Candidates_552.tsv,diamond_best_title,string,yes,DIAMOND Swiss-Prot evidence field: best title.
+Table_S5_Candidates_552.tsv,diamond_best_pident,number,yes,DIAMOND Swiss-Prot evidence field: best pident.
+Table_S5_Candidates_552.tsv,diamond_best_query_coverage_hsp,number,yes,DIAMOND Swiss-Prot evidence field: best query coverage hsp.
+Table_S5_Candidates_552.tsv,diamond_best_subject_coverage_hsp,number,yes,DIAMOND Swiss-Prot evidence field: best subject coverage hsp.
+Table_S5_Candidates_552.tsv,diamond_best_evalue,number,yes,DIAMOND Swiss-Prot evidence field: best evalue.
+Table_S5_Candidates_552.tsv,diamond_best_bitscore,number,yes,DIAMOND Swiss-Prot evidence field: best bitscore.
+Table_S5_Candidates_552.tsv,interpro_has_any_match,boolean/binary,no,InterProScan evidence field: has any match.
+Table_S5_Candidates_552.tsv,interpro_has_mapped_entry,boolean/binary,no,InterProScan evidence field: has mapped entry.
+Table_S5_Candidates_552.tsv,interpro_match_objects,integer,no,InterProScan evidence field: match objects.
+Table_S5_Candidates_552.tsv,interpro_integrated_entry_count,integer,no,InterProScan evidence field: integrated entry count.
+Table_S5_Candidates_552.tsv,interpro_integrated_accessions,string,yes,InterProScan evidence field: integrated accessions.
+Table_S5_Candidates_552.tsv,interpro_signature_libraries,string,yes,InterProScan evidence field: signature libraries.
+Table_S5_Candidates_552.tsv,interpro_has_go_annotation,boolean/binary,no,InterProScan evidence field: has go annotation.
+Table_S5_Candidates_552.tsv,annotation_coverage_category,string,no,Annotation coverage category.
+Table_S5_Candidates_552.tsv,provisional_evidence_category_UNCHANGED,string,no,Provisional evidence category unchanged.
+Table_S5_Candidates_552.tsv,sequence_exact_full_length_swissprot_match,boolean/binary,no,Sequence exact full length swissprot match.
+Table_S5_Candidates_552.tsv,has_swissprot_reported_hit,boolean/binary,no,Has swissprot reported hit.
+Table_S5_Candidates_552.tsv,has_mapped_interpro_entry,boolean/binary,no,Has mapped interpro entry.
+Table_S5_Candidates_552.tsv,has_any_interpro_match,boolean/binary,no,Has any interpro match.
+Table_S5_Candidates_552.tsv,original_adjudication_status,string,no,Original adjudication status.
+Table_S5_Candidates_552.tsv,independent_audit_review_origin,string,no,Independent audit review origin.
+Table_S5_Candidates_552.tsv,independent_audit_new_context_flag,boolean/binary,no,Binary threshold-0.5 prediction flag for independent_audit_new_context.
+Table_S5_Candidates_552.tsv,bio_AMR_phenotype_supported,string,no,Bio amr phenotype supported.
+Table_S5_Candidates_552.tsv,novel_sequence_proven,string,no,Novel sequence proven.
+Table_S5_Candidates_552.tsv,publication_use,string,no,Independent-audit publication-use qualification.
+Table_S5_Qualified_interpretations.tsv,protein_key,string,no,Stable panel-scoped candidate key and parent key for linked evidence tables.
+Table_S5_Qualified_interpretations.tsv,panel_id,string,no,Stable ESKAPE reference-panel identifier.
+Table_S5_Qualified_interpretations.tsv,original_protein_id,string,no,Original protein id.
+Table_S5_Qualified_interpretations.tsv,length_aa,integer,no,Length aa.
+Table_S5_Qualified_interpretations.tsv,M3_frozen_score,number,no,Saved model probability score for M3_frozen.
+Table_S5_Qualified_interpretations.tsv,provisional_functional_evidence_category,string,no,Provisional functional evidence category.
+Table_S5_Qualified_interpretations.tsv,evidence_status,string,no,Evidence status.
+Table_S5_Qualified_interpretations.tsv,sequence_status_within_reviewed_swissprot_search,string,no,Sequence status within reviewed swissprot search.
+Table_S5_Qualified_interpretations.tsv,exact_swissprot_accessions,string,yes,Exact swissprot accessions.
+Table_S5_Qualified_interpretations.tsv,best_swissprot_accession,string,yes,Best swissprot accession.
+Table_S5_Qualified_interpretations.tsv,best_swissprot_product,string,yes,Best swissprot product.
+Table_S5_Qualified_interpretations.tsv,best_alignment_identity_pct,number,yes,Best alignment identity pct.
+Table_S5_Qualified_interpretations.tsv,best_alignment_query_coverage_pct,number,yes,Best alignment query coverage pct.
+Table_S5_Qualified_interpretations.tsv,best_alignment_subject_coverage_pct,number,yes,Best alignment subject coverage pct.
+Table_S5_Qualified_interpretations.tsv,interpro_entries,string,yes,InterProScan evidence field: entries.
+Table_S5_Qualified_interpretations.tsv,interpro_entry_names,string,yes,InterProScan evidence field: entry names.
+Table_S5_Qualified_interpretations.tsv,interpro_member_signature_accessions,string,yes,InterProScan evidence field: member signature accessions.
+Table_S5_Qualified_interpretations.tsv,cross_source_named_mechanism_text,string,yes,Cross source named mechanism text.
+Table_S5_Qualified_interpretations.tsv,review_flags,string,yes,Review flags.
+Table_S5_Qualified_interpretations.tsv,contextual_review_flags,string,yes,Contextual review flags.
+Table_S5_Qualified_interpretations.tsv,special_case_interpretation,string,yes,Special case interpretation.
+Table_S5_Qualified_interpretations.tsv,special_case_limitations,string,yes,Special case limitations.
+Table_S5_Qualified_interpretations.tsv,annotation_interpretation_scope,string,no,Annotation interpretation scope.
+Table_S5_Qualified_interpretations.tsv,phenotype_validated,boolean/binary,no,Whether an AMR phenotype was experimentally validated in this study.
+Table_S5_Qualified_interpretations.tsv,novel_protein_sequence_demonstrated,boolean/binary,no,Whether sequence novelty was established by the evidence search.
+Table_S5_Qualified_interpretations.tsv,final_experimental_AMR_claim,string,no,Final audit field; NOT_ESTABLISHED means no experimental AMR claim.
+Table_S5_SwissProt_alignments.tsv,protein_key,string,no,Stable panel-scoped candidate key and parent key for linked evidence tables.
+Table_S5_SwissProt_alignments.tsv,qseqid,string,no,Candidate query identifier.
+Table_S5_SwissProt_alignments.tsv,sseqid,string,no,Swiss-Prot subject sequence identifier.
+Table_S5_SwissProt_alignments.tsv,pident,number,no,Percent sequence identity for the local alignment.
+Table_S5_SwissProt_alignments.tsv,length,integer,no,Length.
+Table_S5_SwissProt_alignments.tsv,mismatch,integer,no,Mismatch.
+Table_S5_SwissProt_alignments.tsv,gapopen,integer,no,Gapopen.
+Table_S5_SwissProt_alignments.tsv,qstart,integer,no,Qstart.
+Table_S5_SwissProt_alignments.tsv,qend,integer,no,Qend.
+Table_S5_SwissProt_alignments.tsv,sstart,integer,no,Sstart.
+Table_S5_SwissProt_alignments.tsv,send,integer,no,Send.
+Table_S5_SwissProt_alignments.tsv,evalue,number,no,DIAMOND expectation value.
+Table_S5_SwissProt_alignments.tsv,bitscore,number,no,DIAMOND bit score.
+Table_S5_SwissProt_alignments.tsv,qlen,integer,no,Qlen.
+Table_S5_SwissProt_alignments.tsv,slen,integer,no,Slen.
+Table_S5_SwissProt_alignments.tsv,qcovhsp,number,no,Percent query coverage by the HSP.
+Table_S5_SwissProt_alignments.tsv,scovhsp,number,no,Percent subject coverage by the HSP.
+Table_S5_SwissProt_alignments.tsv,stitle,string,no,Stitle.
+Table_S5_SwissProt_alignments.tsv,uniprot_accession,string,no,Reviewed Swiss-Prot subject accession parsed from the alignment.
+Table_S5_InterPro_matches.tsv.gz,protein_key,string,no,Stable panel-scoped candidate key and parent key for linked evidence tables.
+Table_S5_InterPro_matches.tsv.gz,match_id,string,no,Stable match identifier linking InterPro match and location rows.
+Table_S5_InterPro_matches.tsv.gz,signature_accession,string,no,Signature accession.
+Table_S5_InterPro_matches.tsv.gz,signature_name,string,yes,Signature name.
+Table_S5_InterPro_matches.tsv.gz,signature_description,string,yes,Signature description.
+Table_S5_InterPro_matches.tsv.gz,library,string,no,Library.
+Table_S5_InterPro_matches.tsv.gz,library_version,string,no,Library version.
+Table_S5_InterPro_matches.tsv.gz,interpro_accession,string,yes,InterProScan evidence field: accession.
+Table_S5_InterPro_matches.tsv.gz,interpro_name,string,yes,InterProScan evidence field: name.
+Table_S5_InterPro_matches.tsv.gz,interpro_type,string,yes,InterProScan evidence field: type.
+Table_S5_InterPro_matches.tsv.gz,original_match_json,JSON string,no,Complete unfiltered original InterProScan match object serialized as JSON.
+Table_S5_InterPro_locations.tsv,protein_key,string,no,Stable panel-scoped candidate key and parent key for linked evidence tables.
+Table_S5_InterPro_locations.tsv,match_id,string,no,Stable match identifier linking InterPro match and location rows.
+Table_S5_InterPro_locations.tsv,location_index,integer,no,One-based location order within a match.
+Table_S5_InterPro_locations.tsv,start,integer,no,Start.
+Table_S5_InterPro_locations.tsv,end,integer,no,End.
+Table_S5_InterPro_locations.tsv,original_location_json,JSON string,no,Complete unfiltered original InterProScan location object serialized as JSON.

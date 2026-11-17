@@ -1,0 +1,12 @@
+# Scientific script dependencies; install a PyTorch build suitable for your hardware.
+numpy
+pandas
+scipy
+scikit-learn
+torch
+transformers
+peft
+accelerate
+huggingface-hub
+ortools
+

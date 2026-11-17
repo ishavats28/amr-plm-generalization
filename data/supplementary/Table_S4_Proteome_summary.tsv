@@ -1,0 +1,7 @@
+panel_id	species	assembly	n_original	n_eligible	n_amrf_any_hit_full	n_amrf_any_hit_eligible	n_core_amr_full	n_core_amr_eligible	n_core_amr_excluded	n_plus_full	n_plus_eligible	n_other_noncore_full	n_other_noncore_eligible	n_exact_overlap_eligible	M1_frozen_total_model_positive	M1_frozen_core_amr_positive	M1_LoRA_total_model_positive	M1_LoRA_core_amr_positive	M3_frozen_total_model_positive	M3_frozen_core_amr_positive	M3_LoRA_total_model_positive	M3_LoRA_core_amr_positive	M0_frozen_total_model_positive	M0_frozen_core_amr_positive	M0_LoRA_total_model_positive	M0_LoRA_core_amr_positive
+E_faecium_DO	Enterococcus faecium	GCF_000174395.2	2727	2705	10	10	9	9	0	1	1	0	0	0	253	9	195	9	655	9	257	9	485	9	294	9
+S_aureus_NCTC8325	Staphylococcus aureus	GCF_000013425.1	2767	2737	21	20	1	1	0	20	19	0	0	0	206	1	157	1	465	1	170	1	372	1	225	1
+K_pneumoniae_MGH78578	Klebsiella pneumoniae	GCF_000016305.1	5255	5190	48	47	18	17	1	29	29	1	1	0	254	12	207	13	619	15	282	13	437	12	301	12
+A_baumannii_ATCC19606	Acinetobacter baumannii	GCF_009035845.1	3669	3621	13	13	4	4	0	9	9	0	0	11	149	3	137	3	481	3	191	3	320	3	228	3
+P_aeruginosa_PAO1	Pseudomonas aeruginosa	GCF_000006765.1	5572	5491	8	8	5	5	0	3	3	0	0	0	189	4	155	4	618	4	282	4	374	4	296	4
+E_cloacae_ATCC13047	Enterobacter cloacae	GCF_000025565.1	5175	5111	60	57	5	4	1	55	53	0	0	0	242	2	190	2	587	3	276	2	447	3	331	2

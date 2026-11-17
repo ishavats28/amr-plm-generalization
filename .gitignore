@@ -1,0 +1,28 @@
+.validation/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.fa
+*.fasta
+*.fastq
+*.bam
+*.tar.gz
+.cache/
+
+# Local environment and credentials
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+
+# Temporary files
+*.tmp
+*.temp

@@ -1,0 +1,28 @@
+{
+  "model_id": "M0",
+  "architecture": "frozen_esm2_residue_mean_mlp",
+  "backbone": "facebook/esm2_t33_650M_UR50D",
+  "backbone_revision": "08e4846e537177426273712802403f7ba8261b6c",
+  "hidden_size": 1280,
+  "pooling": "mean over residues excluding special and padding tokens; FP32 accumulation",
+  "backbone_precision": "bfloat16",
+  "embedding_storage_precision": "float16",
+  "seed": 42,
+  "head_widths": [
+    256,
+    64
+  ],
+  "dropout": 0.3,
+  "optimizer": "AdamW",
+  "learning_rate": 0.001,
+  "weight_decay": 0.01,
+  "batch_size": 128,
+  "max_epochs": 15,
+  "early_stopping_patience": 3,
+  "early_stopping_min_delta": 0.0001,
+  "checkpoint_metric": "validation_loss",
+  "classification_threshold_for_monitoring_only": 0.5,
+  "embedding_max_sequences_per_batch": 4,
+  "embedding_max_padded_tokens_per_batch": 2048,
+  "embedding_progress_every_n_sequences": 128
+}
